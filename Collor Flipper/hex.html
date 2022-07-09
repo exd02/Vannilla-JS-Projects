@@ -6,10 +6,10 @@
   <title>Color Flipper || Simple</title>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-  <script src='main.js'></script>
+  <script src='hex.js'></script>
 </head>
 <body>
-  <div class="navbar">
+  <nav class="navbar">
     <div class="navbar-title-container">
       <div class="navbar-title vertically-center">
         Color Flipper
@@ -21,6 +21,15 @@
         <a href=hex.html>Hex</a>
       </div>
     </div>
-  </div>
+  </nav>
+
+  <main class="bg" id="bg">
+    <div class="center-container vertically-center">
+      <span class="bginfo bginfo-font">Background Color: <span class="bg-color-value" id="colorValue">Rgba(133,122,200)</span></span>
+      <div class="click-button-container">
+        <input type=button value="CLICK ME" onclick="changeBackgroundColor('bg')">
+      </div>
+    </div>
+  </main>
 </body>
 </html>

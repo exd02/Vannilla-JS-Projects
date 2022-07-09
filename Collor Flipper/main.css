@@ -66,12 +66,13 @@
 .bg {
   width: 100vw;
   height: calc(100vh - var(--navbar-height));
+  background-color: Rgba(133,122,200);
 }
 
 .center-container {
   margin: 0 auto;
   height: 20vh;
-  width: 65vw;
+  width: 100vw;
   text-align: center;
 }
 
@@ -95,7 +96,7 @@
   background-color: rgba(0, 0, 0, 0);
   font-size: 1.2rem;
   padding: 5px 15px;
-  transition: background-color 400ms, color 200ms;
+  transition: background-color 400ms, color 400ms;
   transition-timing-function: ease-in-out;
 }
 
