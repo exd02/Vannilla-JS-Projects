@@ -12,39 +12,49 @@
 <body>
 
   <nav>
-    <ul class="container-list" id="navbarTitle">
-    <li class="list-itens"><h1 class="nav-title">Coding</h1></li><!-- these lines are comented due to a whitespace between the itens. See "https://stackoverflow.com/questions/19038799/why-is-there-an-unexplainable-gap-between-these-inline-block-div-elements" for more information. 
-    --><li class="list-itens"><h1 class="nav-title">Adict</h1></li>
-    </ul>
-    <ul class="container-list">
-    <li class="list-itens">
-      <a href="index.html" >Home</a>
-    </li>
-    <li class="list-itens">
-      <a href="#">About</a>
-    </li>
-    <li class="list-itens">
-      <a href="#">Projects</a>
-    </li>
-    <li class="list-itens">
-      <a href="#">Contact</a>
-    </li>
-    </ul>
-    <ul class="container-list">
-      <li class="list-itens">
-        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-      </li>
-      <li class="list-itens">
-        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-      </li>
-      <li class="list-itens">
-        <a href="#"><i class="fa-brands fa-behance"></i></a>
-      </li>
-        <a href="#"><li class="list-itens"><i class="fa-brands fa-linkedin"></i></a>
-      </li>
-        <a href="#"><li class="list-itens"><i class="fa-brands fa-sketch"></i></a>
-      </li>
-    </ul>
+    <div class="navbar" id="navbar">
+      <!-- Title -->
+      <div class="navbar-expander" id="navbarExpand">
+        <ul class="container-title" id="navbarTitle">
+          <li class="title-itens"><h1 class="nav-title">Coding</h1></li><!-- these lines are comented due to a whitespace between the itens. See "https://stackoverflow.com/questions/19038799/why-is-there-an-unexplainable-gap-between-these-inline-block-div-elements" for more information. 
+        --><li class="title-itens"><h1 class="nav-title">Adict</h1></li>
+        </ul>
+        <button class="mobile-menu mobile-container" id="menuMobileBtn" onclick="toggleMenuVisibility()"><li class="list-itens"><i class="fa-solid fa-bars"></i></li></button>
+      </div>
+
+      <!-- Links -->
+      <ul class="container-list" id="navPagesLinks">
+        <li class="list-itens">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="list-itens">
+          <a href="#">About</a>
+        </li>
+        <li class="list-itens">
+          <a href="#">Projects</a>
+        </li>
+        <li class="list-itens">
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Icons Links -->
+      <ul class="container-list" id="navIconsList">
+        <li class="list-itens">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        </li>
+        <li class="list-itens">
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </li>
+        <li class="list-itens">
+          <a href="#"><i class="fa-brands fa-behance"></i></a>
+        </li>
+          <a href="#"><li class="list-itens"><i class="fa-brands fa-linkedin"></i></a>
+        </li>
+          <a href="#"><li class="list-itens"><i class="fa-brands fa-sketch"></i></a>
+        </li>
+      </ul>
+    </div>
   </nav>
 
 </body>
