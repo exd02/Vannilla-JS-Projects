@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto+Condensed:wght@300&family=Roboto:wght@100&display=swap');
+
+* {
+  margin: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+
+  --blue: rgba(0, 162, 255, 1.0);
+  --blue-strong: rgb(0, 123, 194);
+}
+
+body { background-color: aliceblue; }
+
+@media screen and (max-width: 400px) { * { font-size: 20px;} }
+@media screen and (max-width: 675px) {
+  * { font-size: 24px;}
+  .show { width: 100vw; }
+}
+@media screen and (min-width: 675px) {
+  * { font-size: 26px;}
+  .show { width: 400px; }
+}
+
+ul { padding: 0; }
+
+.title {
+  font-size: 1.4em;
+  text-shadow: -2px 1px 2px rgba(0, 0, 0, 0.3);
+}
+.container-title .title-itens:first-child { padding: 10px .65em 5px 10px; }
+
+.container-title .title-itens:last-child { color: var(--blue); }
+
+.title-itens { 
+  display: inline-block;
+  letter-spacing: .12em;
+}
+
+aside {
+  width: 0;
+  overflow: hidden;
+  display:grid;
+  row-gap: 25px;
+  grid-template-rows: auto 1fr auto;
+  background-color: white;
+  height: 100vh;
+  transition: width 400ms;
+}
+
+.aside-header {
+  margin: 5px 18px 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  cursor: pointer;
+}
+
+.close-button {
+  color: red;
+  transition: transform 500ms;
+}
+
+.close-button:hover {
+  transform: rotate(360deg);
+}
+
+.mobile-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
+}
+
+.mobile-button i{
+  color: var(--blue);
+}
+
+.mobile-button i:hover {
+  color: var(--blue-strong);
+}
+
+.pulse {
+  animation: pulse 1s infinite ease-in-out alternate;
+}
+@keyframes pulse {
+  from { transform: scale(1.0); }
+  to { transform: scale(1.4); }
+}
+
+.list-itens a{
+  display: block;
+  padding: 0.8em;
+  text-decoration: none;
+  color: black;
+  transition: color 250ms, background-color 250ms, padding-left 300ms;
+}
+
+.list-itens a:visited, .list-itens a:link, .list-itens a:active { color: black; }
+
+.list-itens a:hover { color: var(--blue); }
+
+#sideLinks a:hover {
+  background-color: rgb(206, 232, 255);
+  padding-left: 1.2em;
+}
+
+/* The last list of the aside are the links,
+we want them to be inline */
+aside .container-list:last-child li { display: inline-block; }
+
+.centered-itens { text-align: center; }
