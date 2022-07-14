@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal</title>
+  <script src="main.js"></script>
+  <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+  <script src="https://kit.fontawesome.com/85eef73453.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="background">
+    <div class="center-item">
+      <h1 class="title">Modal Project</h1>
+      <button class="open-modal-button" onclick="toggleVisibility('overlayBg','show')" type="button">open modal</button>
+    </div>
+  </div>
+
+  <div class="overlay-bg" id="overlayBg">
+    <div class="overlay-modal-content">
+      <button class="close-button" onclick="toggleVisibility('overlayBg','show')"><i class="fa-solid fa-x"></i></button>
+      <h3 class="h3-title">Modal Content</h3>
+    </div>
+  </div>
+
+</body>
+</html>

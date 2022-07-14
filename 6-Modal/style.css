@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto+Condensed:wght@300&family=Roboto:wght@100&display=swap');
+
+* {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 22px;
+
+  --blue: rgba(0, 162, 255, 1.0);
+  --blue-weak: rgba(0, 162, 255, 0.35);
+}
+
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 400px) {
+  * { font-size: 18px; }
+}
+@media screen and (min-width: 800px) {
+  * { font-size: 26px; }
+}
+
+.background {
+  background-image: url('img/hero.jpeg');
+  height: 100vh;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: grid;
+  place-items: center;
+}
+
+.center-item, .overlay-modal-content {
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.4);
+  background-color: white;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.center-item, .overlay-modal-content {
+  width: 90vw;
+  max-width: 650px;
+}
+
+.center-item {
+  padding: 2.5em 0;
+  line-height: 1.6;
+  transition: 200ms;
+}
+
+.title {
+  font-size: 3em;
+  letter-spacing: 5px;
+}
+
+.h3-title { font-size: 1.8em; }
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.open-modal-button {
+  text-transform: uppercase;
+  border: 1px solid var(--blue);
+  padding: 6px;
+  font-size: 0.8em;
+  border-radius: 6px;
+  color: white;
+  letter-spacing: 0.15em;
+  background-color: var(--blue);
+  transition: background-color 250ms, color 130ms;
+}
+
+.open-modal-button:hover {
+  border: 1px solid var(--blue);
+  color: black;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.show { visibility:visible !important; }
+
+.overlay-bg {
+  position: absolute;
+
+  background-color: var(--blue-weak);
+
+  top:0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+
+  display: grid;
+  place-items: center;
+
+  visibility: hidden;
+}
+
+.overlay-modal-content {
+  display: grid;
+  position: relative;
+  place-items: center;
+  height: 13rem;
+}
+
+.close-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0.3rem 0.4rem;
+}
+
+
+.close-button i{
+  color: red;
+  transition: transform 200ms;
+}
+.close-button i:hover {
+  transform: scale(1.3);
+}
