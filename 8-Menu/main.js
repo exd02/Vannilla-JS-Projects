@@ -76,9 +76,13 @@ const menu = [
 const container = document.querySelector('.container')
 
 window.onload = function() {
-  let menuItens = menu.map(function(item) {
+  printItens(menu)
+}
+
+function printItens(itens) {
+  let menuItens = itens.map(function(item) {
     return `<article class="item">
-      <img src="${item.img}" class="item-img">
+      <img src="${item.img}" class="item-img" alt="${item.title}">
       <div class="item-info">
         <div class="item-header">
           <h4 class="item-name">${item.title}</h4>
@@ -90,6 +94,5 @@ window.onload = function() {
   })
 
   menuItens = menuItens.join("") // Remove the "," btween itens
-
   container.innerHTML = menuItens
 }
