@@ -98,12 +98,10 @@ body { background-color: var(--blue-bg); }
   border-bottom: 1px dotted;
 }
 
-.item-name {
-  font-size: 0.9em;
-}
+.item-name { text-transform: capitalize; }
 
 .item-price {
-  font-weight: 900;
+  font-weight: 700;
   color: var(--brown);
   letter-spacing: 0.08em;
 }
