@@ -96,3 +96,13 @@ function printItens(itens) {
   menuItens = menuItens.join("") // Remove the "," btween itens
   container.innerHTML = menuItens
 }
+
+function filterItens(menuFilter) {
+  if (menuFilter === 'all')
+    return printItens(menu)
+
+  const results = menu.filter((item) => {
+    return item.category === menuFilter;
+  });
+  printItens(results)
+}
