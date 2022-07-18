@@ -18,8 +18,7 @@
 a:visited, a:link, a:active { color: rgb(255, 255, 255); }
 a { text-decoration: none; }
 
-@media screen and (max-width: 700px) {
-  .show { height: 9.79rem !important; }
+@media screen and (max-width: 800px) {
   body { font-size: 16px; }
   /* Block the nav display and make the logo + mobile button fit-
   flex space between                                             */
@@ -42,11 +41,6 @@ a { text-decoration: none; }
   .nav-right {
     height: 0;
     overflow: hidden;
-    margin: 0;
-  }
-
-  .nav-links { 
-    margin: 0;
   }
 
   .nav-links:hover {
@@ -57,11 +51,15 @@ a { text-decoration: none; }
   nav a:visited, nav a:link, nav a:active { color: black; }
 }
 
-@media screen and (min-width: 701px) {
+@media screen and (min-width: 801px) {
   nav { display: flex; }
-  .nav-right { margin-right: 2rem; }
+  .nav-right {
+    height: auto !important;
+    margin-right: 2rem;
+  }
   .nav-links { margin: 0 0.5em; }
   .mobileMenuBtn { display: none; }
+
 }
 
 nav {
@@ -96,7 +94,7 @@ header {
 
   min-height: 100vh;
 
-  background-image: linear-gradient(rgba(0, 162, 255, 0.5), rgba(5, 14, 1, 0.65)), url('./img/hero-bcg.jpeg');
+  background-image: linear-gradient(rgba(0, 189, 202, 0.5), rgba(5, 14, 1, 0.65)), url('./img/hero-bcg.jpeg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -113,13 +111,15 @@ header {
 
 .container {
   max-width: 700px;
-  width: 80vw;
+  width: 95vw;
 }
 
 .title {
+  letter-spacing: 0.08em;
+  word-spacing: 0.2em;
   text-transform: uppercase;
   font-weight: 1000;
-  font-size: 3em;
+  font-size: 3.6em;
   margin-bottom: 1rem;
 }
 
