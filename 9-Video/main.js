@@ -1,6 +1,6 @@
 const button = document.querySelector('.switch-options')
 const video = document.querySelector('.video-container')
-video.volume = 0;
+video.volume = 0.2;
 
 function pauseVideo() {
   if (button.classList.contains('off')) {
