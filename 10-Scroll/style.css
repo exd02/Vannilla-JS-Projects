@@ -15,9 +15,6 @@
   --border-radius: 0.8em;
 }
 
-a:visited, a:link, a:active { color: rgb(255, 255, 255); }
-a { text-decoration: none; }
-
 @media screen and (max-width: 800px) {
   body { font-size: 16px; }
   /* Block the nav display and make the logo + mobile button fit-
@@ -62,10 +59,26 @@ a { text-decoration: none; }
 
 }
 
+a:visited, a:link, a:active { color: rgb(255, 255, 255); }
+
+a { text-decoration: none; }
+
 nav {
   font-weight: 700;
   justify-content: space-between;
   align-items: center;
+}
+
+.fixed-nav {
+  position: fixed;
+  background-color: white;
+  color: black;
+  width: 100vw;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.25);
+}
+
+.fixed-nav a {
+  color: black;
 }
 
 .nav-right { transition: height var(--transition); }
@@ -177,3 +190,14 @@ footer p {
   font-size: 1.2em;
   max-width: 80vw;
 }
+
+/* ADJUST THE SCROLBAR */
+  /* width */
+  ::-webkit-scrollbar { width: 7px; }
+  /* Track */
+  ::-webkit-scrollbar-track { background: #dadada; }
+  /* Handle */
+  ::-webkit-scrollbar-thumb { background: var(--blue-weak); }
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover { background: var(--blue); }
+/* ------------------ */
