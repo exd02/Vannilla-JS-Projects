@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto+Condensed:wght@300&display=swap');
+
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 18px;
+  --dark-primary: #121212;
+  --dark-st: rgba(30, 30, 30, 0.8);
+  --dark-wk: rgba(35, 35, 35, 0.8);
+
+  --white87: rgba(255,255,255,0.87);
+  --white60: rgba(255,255,255,0.6);
+  --white38: rgba(255,255,255,0.38);
+  --white10: rgba(255,255,255,0.10);
+
+  --purple-87: rgb(187, 134, 252, 0.87);
+  --purple-60: rgb(187, 134, 252, 0.6);
+  --purple-38: rgba(187, 134, 252,0.38);
+
+  --radius: 6px;
+  --window-bradius: 12px;
+  --transition: 250ms;
+}
+@media screen and (max-width: 980px) {
+  * {
+    font-size: 16px;
+  }
+  .outer {
+    grid-template-rows: auto 1fr;
+  }
+  .container-img, .container-desc {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 981px)
+{ 
+  .outer {
+    grid-template-columns: 1fr 1fr;
+  }
+  .container-img, .container-desc {
+    width: 100%;
+  }
+}
+
+
+body {
+  background-color: var(--dark-primary);
+  color: var(--white87);
+}
+
+.outer {
+  width: 90vw;
+  height: auto;
+  max-width: 980px;
+  padding-top: 8vh;
+  margin: 0 auto;
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  gap: 1rem;
+}
+
+.container-img, .container-desc {
+  margin: 0;
+  height: 100%;
+  background-color: var(--dark-st);
+  margin: 0 auto;
+}
+
+.container-img img {
+  border-radius: var(--radius);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container-desc {
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.container-desc .giveway-title, .endtime, .about-item, .counter-container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: block;
+}
+
+.giveway-title {
+  padding-top: 1rem;
+  color: var(--purple-87);
+  font-size: 1.5em;
+}
+
+.endtime {
+  color: var(--white60);
+  font-size: 1.05em;
+}
+
+.counter-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 400px;
+  padding-bottom: 1rem;
+}
+
+.counter {
+  color: var(--purple-87);
+  background-color: var(--dark-wk);
+  border-radius: var(--radius);
+  width: 24%;
+  text-align: center;
+  display: inline-block;
+  border: 1px solid;
+}
+
+.time {
+  font-size: 1.5em;
+  padding: 0.2rem 0 0.5rem 0;
+}
+
+.type {
+  text-transform: uppercase;
+}

@@ -94,7 +94,7 @@ body {
 
 .image-container, .info-container {
   border-radius: var(--radius);
-  border: 1px solid var(--white10);
+  border: 1px solid var(--white60);
   background-color: var(--dark-st);
 }
 
